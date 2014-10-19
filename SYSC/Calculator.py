@@ -5,21 +5,15 @@ def add (x, y):
     return x + y
 
 def subtract (x, y):
-    """
-    Returns the difference of the variables, x & y
-    """
+    """ Returns the difference of the variables, x & y """
     return x - y
 
 def multiply (x, y):
-    """
-    Returns the product of the variables, x & y
-    """
+    """ Returns the product of the variables, x & y """
     return x * y
 
 def divide (x, y):
-    """
-    Returns the quotient of the variables, x & y
-    """
+    """ Returns the quotient of the variables, x & y """
     return x / y
 
 
@@ -30,6 +24,8 @@ def print_menu():
     - add
     - subtract
     - multiply
+    - divide
+    - exponents
     """
     print("Select operation")
     print("1. Add")
@@ -38,7 +34,7 @@ def print_menu():
     print("4. Divide")
     print("5. Exponents")    
 
-#Outputs the input
+#The Calculator
 while True:
     n = input("Want another math calculation (yes/no)?: ")
     if n == "no":
@@ -50,37 +46,26 @@ while True:
     num2 = float(input("Enter second number: "))
 
     if choice == "1":  # Add
-        """
-        Returns the sum of the two variables
-        """
+        """ Returns the sum of the two variables """
         c = num1 + num2
         print (c)
     
     elif choice == "2":  # Subtract
-        """
-        Returns the difference between two variables
-        """
+        """ Returns the difference between two variables """
         c = num1 - num2
         print (c)
     
-    elif choice == "3":
-        """
-        Returns the product of the two variables
-        """
+    elif choice == "3": # Multiply
+        """ Returns the product of the two variables """
         c = num1 * num2
         print (c)
     
-    elif choice == "4":
-        """
-        Returns the quotient of the two variables
-        """
+    elif choice == "4": # Divide
+        """ Returns the quotient of the two variables """
         c = num1 / num2
         print(c)
 
-    elif choice == "5":
-        """
-        Exponent function where:
-        num1 is the base and num2 raises it to some power
-        """
+    elif choice == "5": # Exponents
+        """ Exponent function where  num1 is the base and num2 raises it to some power """
         c = num1 ** num2
         print (c)
