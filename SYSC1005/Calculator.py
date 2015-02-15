@@ -32,13 +32,14 @@ def print_menu():
     print("2. Subtract")
     print("3. Multiply")
     print("4. Divide")
-    print("5. Exponents")    
+    print("5. Exponents")
 
 #The Calculator
+n = "yes"
 while True:
-    n = input("Want another math calculation (yes/no)?: ")
     if n == "no":
         break
+
     print_menu()
 
     choice = input ("Enter choice (1 / 2 / 3 / 4 / 5): ")
@@ -49,17 +50,17 @@ while True:
         """ Returns the sum of the two variables """
         c = num1 + num2
         print (c)
-    
+
     elif choice == "2":  # Subtract
         """ Returns the difference between two variables """
         c = num1 - num2
         print (c)
-    
+
     elif choice == "3": # Multiply
         """ Returns the product of the two variables """
         c = num1 * num2
         print (c)
-    
+
     elif choice == "4": # Divide
         """ Returns the quotient of the two variables """
         c = num1 / num2
@@ -69,3 +70,5 @@ while True:
         """ Exponent function where  num1 is the base and num2 raises it to some power """
         c = num1 ** num2
         print (c)
+
+    n = input("Want another math calculation (yes/no)?: ")
