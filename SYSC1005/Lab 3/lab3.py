@@ -45,28 +45,36 @@ def circumference(r):
 
 
 def area_of_pipe(pipe_inner_radius, length_of_pipe, pipe_thickness):
-
     area_of_end_ring = 2 * area_of_ring(pipe_thickness + pipe_inner_radius, pipe_inner_radius)
     area_outer_length = circumference(pipe_thickness + pipe_inner_radius) * length_of_pipe
     area_inner_length = circumference(pipe_inner_radius) * length_of_pipe
     return area_of_end_ring + area_outer_length + area_inner_length
 
 
-#Tests quadratic_roots function
+# Tests quadratic_roots function
 quadratic_roots_test1 = quadratic_roots(1, -4, -21)
 quadratic_roots_test2 = quadratic_roots(4, 12, 9)
-print ("Expected value of quadratic_roots_test1: 7.0 & -3.0")
-print ("Expected value of quadratic_roots_test2: -1.5 & -1.5")
-print ("quadratic_roots_test1:", quadratic_roots_test1)
-print ("quadratic_roots_test2:", quadratic_roots_test2)
+print("Expected value of quadratic_roots_test1: 7.0 & -3.0")
+print("Expected value of quadratic_roots_test2: -1.5 & -1.5")
+print("quadratic_roots_test1:", quadratic_roots_test1)
+print("quadratic_roots_test2:", quadratic_roots_test2)
 
-#Tests make_change function
+
+# Tests make_change function
 make_change_test1 = make_change(160, 80)
 make_change_test2 = make_change(103, 50)
 make_change_test3 = make_change(222, 1)
-print ("Expected value of make_change_test1: 0, 3, 0, 1, 0")
-print ("Expected value of make_change_test2: 0, 2, 0, 0, 3")
-print ("Expected value of make_change_test3: 2, 0, 2, 0, 1")
-print (make_change_test1)
-print (make_change_test2)
-print (make_change_test3)
+print("Expected value of make_change_test1: 0, 3, 0, 1, 0")
+print("Expected value of make_change_test2: 0, 2, 0, 0, 3")
+print("Expected value of make_change_test3: 2, 0, 2, 0, 1")
+print("make_change_test1:", make_change_test1)
+print("make_change_test1:", make_change_test2)
+print("make_change_test1:", make_change_test3)
+
+# Tests area_of_disk
+area_of_disk_test1 = area_of_disk(1)
+area_of_disk_test2 = area_of_disk(3.5)
+print("Expected value of area_of_disk_test1: 3.141592653589793")
+print("Expected value of area_of_disk_test2: 38.48451000647496")
+print("area_of_disk_test1:", area_of_disk_test1)
+print("area_of_disk_test1:", area_of_disk_test2)
