@@ -102,8 +102,10 @@ fraction_t *make_fraction(int a, int b)
 */
 fraction_t *add_fractions(fraction_t *pf1, fraction_t *pf2)
 {
-    fraction_t *pf = make_fraction(0, 1);
-    return pf;
+    fraction_t *pf = malloc(sizeof(fraction_t));
+    (*pf1).num = (*pf1).num * (*pf2).den + (*pf2).num * (*pf1).den;
+    (*pf2).den = (*pf2).den * (*pf1).den;
+    make_fraction((*pf1).num, (*pf2).den);
 }
 
 /* Return a pointer to a new fraction containing the product of the fractions
