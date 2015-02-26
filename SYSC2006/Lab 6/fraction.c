@@ -24,19 +24,17 @@ void print_fraction(fraction_t *pf)
 int gcd(int a, int b)
 {
 	/* Euclid's algorithm, using iteration and calculation of remainders. */
-
 	int q = abs(a);
     int p = abs(b);
     int r = q % p;
 
-    while (r){
+    while (r)
+    {
         r != 0;
-
         q = p;
         p = r;
         r = q%p;
     }
-
     return p;
 }
 
