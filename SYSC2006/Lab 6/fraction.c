@@ -84,7 +84,14 @@ void reduce(fraction_t *pf)
 fraction_t *make_fraction(int a, int b)
 {
     fraction_t *pf = malloc(sizeof(fraction_t));
-    return pf;
+    if (b == 0)
+    {
+        printf ("Error, dividing by zero");
+        exit(0);
+    }
+    (*pf).num = a;
+    (*pf).den = b;
+    reduce(pf);
 }
 
 /* Return a pointer to a new fraction containing the sum of the fractions
