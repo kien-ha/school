@@ -11,10 +11,10 @@
  */
 void print_fraction(fraction_t *pf)
 {
-    int a = (*pf).num;
-    int b = (*pf).den;
+    (*pf).num;
+    (*pf).den;
     assert(pf != NULL);
-	printf("%d/%d", a, b);
+    printf("%d/%d", (*pf).num, (*pf).den);
 }
 
 /* Return the greatest common divisor of integers a and b;
@@ -57,6 +57,7 @@ int gcd(int a, int b)
 */
 void reduce(fraction_t *pf)
 {
+
 }
 
 /* Return a pointer to a new fraction with numerator a and denominator b.
