@@ -56,9 +56,23 @@ int gcd(int a, int b)
        common divisor.
 */
 void reduce(fraction_t *pf)
-{
 
+{
+    if ((*pf).num == 0)
+    {
+        (*pf).den = 1;
+    }
+
+    if ((*pf).den <  0)
+    {
+        (*pf).den=-(*pf).den;
+        (*pf).num = -(*pf).num;
+        }
+    int x = gcd((*pf).num, (*pf).den);
+    (*pf).num = (*pf).num/x;
+    (*pf).den = (*pf).den/x;
 }
+
 
 /* Return a pointer to a new fraction with numerator a and denominator b.
    Terminate the calling program via assert() if a new fraction can't be
