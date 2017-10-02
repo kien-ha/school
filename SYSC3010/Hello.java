@@ -1,7 +1,7 @@
 
 public class Hello {
 
-	public static main(String[] args) 
+	public static void main(String[] args) 
 	{
 		Hello hello = new Hello();
 		hello.methodA();
@@ -9,9 +9,15 @@ public class Hello {
 		hello.methodC();
 	}
 
-	public void methodA(void ) { }
+	public void methodA() {
+            //System.out.println("Hello Alagu!");
+        }
 
-	public void methodb(void) { }
+	public void methodB() {
+            //System.out.println("Hello Carmen!");
+        }
 
-	public void methodC(void) { }
+	public void methodC() {
+            //System.out.println("Hello Keith!");
+        }
 }
